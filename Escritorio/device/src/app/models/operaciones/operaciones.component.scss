@@ -1,0 +1,156 @@
+.alineare{
+    float: left;
+    position: relative;
+}
+.contenedor{
+    width: 100%;
+} 
+.alinedao{
+   float: right;
+}
+.contenedor{
+    background-color: white;
+    margin-left: 2%;
+    width: 95%;
+    margin-right: 2%;
+}
+.iconos{
+ width: 18%;
+ height: auto;
+ border-radius: 0 20px 20px 0;
+}
+h5{
+    position: relative;
+    float: left;
+    color: white;
+}
+.pos{
+    position: relative;
+    float: left;
+}
+#hide-me {
+    display: none;   
+  }
+  #hide-me2 {
+    display: block;
+  }
+  #hide-me3 {
+    display: none;   
+  }
+  #hide-me4 {
+    display: block;   
+  }
+
+  .pos1{
+    position: relative;
+    float: left; 
+  }
+  .tabla{
+      padding-top: 2%;
+      padding-left: 5%;
+      padding-right: 8%;
+  }
+ .oculto{
+   display: none;
+ } 
+ h3{
+     font-size: medium;
+ }
+ .enlace{
+     width: 100%;
+     position: relative;
+    margin-bottom: 1%;
+     text-decoration: none;
+     color:black;
+ }
+  a:hover{
+      background-color: white;
+      height: 101%;
+  }
+  a:active, a:active * { outline: none !important; -moz-outline-style: none !important; }
+a:focus, a:focus * { outline: none !important; -moz-outline-style: none !important; }
+.fila{
+    border-bottom: solid 1px lightgrey;
+    
+  
+
+}
+.titulo{
+    border-bottom: solid 1px lightgrey;
+}
+.btn1{
+    background-color: white;
+}
+#eli {
+    display: none;   
+  }
+  #eli2 {
+    display: block;
+  }
+.eliminar{
+      position: fixed;
+      width: 10%;
+      height: 10%;
+      
+  }
+  .de{
+      width: 65%;  
+     margin-top: 0%;
+      margin-left: 4%;
+      float: left;
+   position: relative;
+   background-color:#EEEEEE;
+   
+    
+     
+  }
+  .de1{
+    width: 30%; 
+   float: left;
+   position: relative;
+   z-index: 1;
+   background-color: #EEEEEE;
+    
+
+  }
+  .fotos:hover{
+    z-index: 2;
+      top: 30%;
+      left: 50%;
+      width: 250px;
+      height: 150px;
+      
+  }
+  body{
+      overflow-x: hidden;
+  }
+  .table{
+      background-color: #EEEEEE;
+  }
+
+  .p1 {
+    width: 75%;
+    max-width: 75ch; 
+  
+    /* BOTH of the following are required for text-overflow */
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .overflow-visible {
+    white-space: initial;
+  }
+  
+  .overflow-clip {
+    text-overflow: clip;
+  }
+  
+  .overflow-ellipsis {
+    text-overflow: ellipsis;
+  }
+  
+  .overflow-string {
+    /* Not supported in most browsers, 
+       see the 'Browser compatibility' section below */
+    text-overflow: " [..]"; 
+  }

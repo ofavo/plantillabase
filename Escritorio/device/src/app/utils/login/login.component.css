@@ -1,0 +1,60 @@
+.test{
+    width: 80px !important;
+    height: 40px !important;
+}
+.nlog{
+    background-image: url('../../../assets/img/nuevolog.jpg');
+   
+}
+.col{
+    padding: 0;
+ 
+}
+.row{
+    padding: 0;
+}
+.img1{
+    width: 100%;
+    height: 100vh;    
+}
+
+.main{
+    overflow-y: hidden;
+    overflow-x:hidden;
+}
+.content{
+    overflow-x:hidden;
+    overflow: hidden;
+
+    
+}
+@media handheld, only screen and (max-width: 1000px) {
+    .login{
+    display:none;
+    }
+    }
+  
+ 
+  
+  .formu{
+      width: 90%;
+  }
+  .logonew{
+                                                                                                                                                                                                                                           
+      position: relative;
+      float: left;
+  }
+  .logoimg{
+    display: block;
+    margin-top: 35%;
+    margin-left: auto;
+    width: 100%;
+}
+body{
+    overflow-y: hidden;
+    overflow-x:hidden;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}

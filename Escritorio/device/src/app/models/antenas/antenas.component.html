@@ -1,0 +1,194 @@
+<div class="main-content">
+    <div class="container-fluid">
+  </div><!--CONTAINER FLUID -->
+   <div class="container-fluid">
+     <div class="row">
+         <div class="col-md-12">
+             <div class="card">
+               <div class="pos">
+                 <div class="iconos pos card-header card-header-icon"  style="background-color: green;">
+                    <mat-icon class="material-icons pos md-80" style="color: white">settings_input_antenna</mat-icon>
+                     <h5>Antenas</h5></div>
+
+                    <div  class=" pos " style="margin-left: 25%; margin-top: 1%">                               
+                        <div class="pos col-md-4">                         
+                          <form>
+
+                            <input type="text" name="filtro" (keyup)="setfiltrado($event)">
+
+                        
+                          </form>
+                        </div>
+                        <div id="alinear" class="pos col-md-4">
+                      
+`
+                      </div>
+                    <div  class="col-md-4 pos"  > 
+                        
+                        </div> 
+                </div>
+
+                 </div>  
+       
+                 <div class="card-content">        
+                          <div class="clearfix"></div> 
+                          <div class="tabla">
+                              <div class=" row titulo">
+                                  <div class="col-md-2 text-center">ID</div>
+                                  <div class="col-md-2 text-center"><h3>NOMBRE</h3></div>
+                                  <div class="col-md-2 text-center"><h3>IP</h3></div>
+                                  <div class="col-md-2 text-center"><h3>PUERTO</h3></div>
+                                  <div class="col-md-2 text-center"><h3></h3></div>
+                                  <div class="col-md-2 text-center"><h3>ACCIONES</h3></div>
+                                  
+                              </div>
+                              <div class="cuerpo">
+                                  <div class="oculto" *ngFor="let row of this.antena">[ocul]='row.id'</div>
+                                  <div *ngFor="let row of this.antena | paginate: {itemsPerPage: 10, currentPage: p}">
+                                  
+                                    <div class="row fila">  
+                                        <a class="row enlace" data-toggle="collapse" href='#ocul{{row.id}}' role="button" aria-expanded="false" aria-controls="collapseExample">
+                                      <div class="col-md-2 text-center">{{row.id}}</div>
+                                      <div class="col-md-2 text-center"></div>
+                                      <div class="col-md-2 text-center">{{row.userId}}</div>
+                                      <div class="col-md-2 text-center"></div>
+                                      <div class="col-md-2 text-center"></div>
+                                      <div class="col-md-2 text-center"> 
+                                          <button  title="Editar"  class="btn btn1" (click)="setocultar2()">
+                                              <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+                                                  <path fill="#000000" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
+                                              </svg>
+                                          </button>
+                                      <button  class="btn btn1" (click)="eliminar()">
+                                              <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+                                                      <path fill="#FF0000" d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" />
+                                                  </svg>
+                                      </button>
+                                       </div>     </a>
+                                    </div>
+                                    <div class=" row collapse" id="ocul{{row.id}}" style="border-bottom: solid 1px lightgrey;">{{row.body}}</div>
+                                  </div>
+                                  <div align="right">
+                                      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                                    </div>  
+                              </div>
+                          </div>
+                   
+                    
+                 
+                 <!-- end content-->
+             </div>
+             <!--  end card  -->
+         </div>
+         <!-- end col-md-12 -->
+     
+     </div >
+     <!--Agregar-->
+     <div class="agregar" id="hide-me">
+       <div class="row">
+        <div class=" pos card-header card-header-icon"  style="background-color: green;border-radius: 0 20px 20px 0;">
+            <mat-icon class="material-icons pos md-80" style="color: white">settings_input_antenna</mat-icon>
+             &nbsp; &nbsp;<h5>Agregar Antena</h5></div></div><br>
+
+     <form novalidate [formGroup]="testForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="">Identificador</label>&nbsp;<span>*</span>
+            <input required type="text" class="form-control" pInputText (keypress)="onlyNumberKey($event)" placeholder="Ej. 124">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="">Nombre</label>&nbsp;<span>*</span>
+            <input required type="text" class="form-control" pattern="[A-Za-z]" id="" placeholder="Ej. antena estacion 2">
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="comentarios">Descripcion</label>
+          <textarea class="form-control" name="comentarios" rows="5" cols="50"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="">Direccion IP</label>
+          <input type="text" class="form-control" placeholder="Ej. 188.165.0.23"  formControlName="inp"> {{testForm.status}}
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputCity">Potencia</label>
+            <input type="text" class="form-control" id=""  pInputText (keypress)="onlyNumberKey($event)" placeholder="Entre 0 y 30`" >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCity">Puerto</label>
+            <input type="text" class="form-control" id=""  pInputText (keypress)="onlyNumberKey($event)" placeholder="Ej. 4444" >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Lecturas por Segundo</label>
+            <input type="text" class="form-control" id=""  pInputText (keypress)="onlyNumberKey($event)" placeholder="Ej. 4" >
+          </div>
+          
+        </div>
+      
+        <button type="submit" class="btn btn-success">Sign in</button>
+        <button type="reset" (click)="setocultar()" class="btn btn-danger">Cancelar</button>
+      </form>
+
+     </div>
+     <!--Modificar-->
+     <div class="agregar2" id="hide-me3">
+        <div class="row">
+         <div class=" pos card-header card-header-icon"  style="background-color: green;border-radius: 0 20px 20px 0;">
+             <mat-icon class="material-icons pos md-80" style="color: white">settings_input_antenna</mat-icon>
+              <h5>Modificar Antenas</h5></div></div><br>
+ 
+      <form novalidate [formGroup]="testForm">
+         <div class="form-row">
+           <div class="form-group col-md-6">
+             <label for="">Identificador</label>&nbsp;<span>*</span>
+             <input required type="text" class="form-control" pInputText (keypress)="onlyNumberKey($event)" placeholder="Ej. 124">
+           </div>
+           <div class="form-group col-md-6">
+             <label for="">Nombre</label>&nbsp;<span>*</span>
+             <input required type="text" class="form-control" pattern="[A-Za-z]" id="" placeholder="Ej. antena estacion 2">
+           </div>
+         </div>
+         <div class="form-group">
+             <label for="comentarios">Descripcion</label>
+           <textarea class="form-control" name="comentarios" rows="5" cols="50"></textarea>
+         </div>
+         <div class="form-group">
+           <label for="">Direccion IP</label>
+           <input type="text" class="form-control" placeholder="Ej. 188.165.0.23"  formControlName="inp"> {{testForm.status}}
+         </div>
+         <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputCity">Potencia</label>
+            <input type="text" class="form-control" id=""  pInputText (keypress)="onlyNumberKey($event)" placeholder="Entre 0 y 30" >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCity">Puerto</label>
+            <input type="text" class="form-control" id=""  pInputText (keypress)="onlyNumberKey($event)" placeholder="Ej. 4444" >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Lecturas por Segundo</label>
+            <input type="text" class="form-control" id=""  pInputText (keypress)="onlyNumberKey($event)" placeholder="Ej. 4" >
+          </div>
+           
+         </div>
+       
+         <button type="submit" class="btn btn-success">Sign in</button>
+         <button type="reset" (click)="setocultar2()" class="btn btn-danger">Cancelar</button>
+       </form>
+ 
+      </div>
+      
+     <!--boton para agragar-->
+     <div>
+        <div class="container-fluid boton" id="hide-me2" >
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group">
+                        <button  class="btn btn-success btn-fab" (click)="setocultar()" data-toggle="tooltip" data-placement="left" data-original-title="Agregar" title="" id="main">
+                          <mat-icon class="material-icons pos md-80">settings_input_antenna</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>

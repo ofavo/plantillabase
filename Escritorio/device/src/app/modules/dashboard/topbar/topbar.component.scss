@@ -1,0 +1,118 @@
+
+.zippy__toolbar__icon {
+  margin-right:100px;
+
+}
+.zippy__spacer {
+  flex: 1 1 auto;
+}
+.mat-sidenav-layout{
+  height: 100%;
+  background-color:#EEEEEE;
+} 
+.user-avatar {
+  background-image: url('https://www.w3schools.com/bootstrap4/img_avatar3.png');
+  background-size: cover;
+  width:60px;
+  height: 40px;
+  border-radius : 25px;
+  margin-top: 3px;
+}
+
+.zippy--router-outlet{
+  position:relative;
+  width:100%;
+  padding-right:10px;
+  margin-top:20px;
+  margin-bottom:40px;
+  margin-left:10px;
+  margin-right:20px !important;
+  height:100%;
+  display: block;
+  overflow: auto;
+  min-height: calc(100vh - 70px);
+  background-color:#EEEEEE;
+}
+
+.sidenav-container {
+  height: 100%;
+   // margin-top:60px;
+
+  background-color:#EEEEEE;
+
+}
+
+.sidenav {
+  width: 180px;
+//  border-right : 1px solid #000000;
+   box-shadow: 0px 0px 10px gray;
+ //  position:fixed;
+  min-height: 100%;
+  // padding-top:55px;
+  min-width:30px !important;
+  z-index: 999999;
+
+}
+.mat-list, .mat-nav-list, .mat-selection-list {
+  padding-top: 0 !important;
+  display: block;
+}
+
+.mat-toolbar.mat-primary {
+  // position: fixed;
+ top: 0;
+ z-index: 9;
+ box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.24);
+ border-bottom:1px solid rgb(59, 57, 57);
+}
+
+.user__profile {
+   font-family: 'Roboto',
+   sans-serif;
+   font-size:12px !important;
+  color:#FFFFFF;
+
+}
+.list .mat-list {
+  padding-top: 0;
+  /* .mat-list also has an additional padding top  */
+}
+
+.list .mat-list .mat-list-item {
+  height: auto !important;
+  /* To avoid calculated height from mat-line-x classes */
+ }
+
+.zippy__pointer {
+  cursor: pointer;
+}
+
+.zippy__user__name{
+  padding-top:7px;
+  font-family: 'Roboto',
+  sans-serif;
+  font-size:12px !important;
+  color: #FFFFFF;
+}
+
+.mat-list .mat-list-item {
+  height: 30px !important;
+  /* default is 72px */
+}
+
+.left-navbar{
+  position: fixed;
+  z-index: 99999999;
+  min-height: 100%;
+  padding: 10px;
+ }
+
+.panel-close{
+  padding-top:10px;
+  padding-left:10px;
+}
+
+.user-profile-accordion {
+  background-color: #5c5346 !important;
+  color: #FFFFFF !important;
+}

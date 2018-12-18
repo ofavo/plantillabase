@@ -1,0 +1,23 @@
+.zippy--toolbar--footer {
+  position: relative ;
+  bottom: 0;
+  left: 0;
+  right:0;
+  transition: 0.3s ease-in-out;
+  overflow:hidden;
+  border-top:1px solid #3b3939;
+   
+}
+
+.app-footer{
+  flex: 1 1 auto;  
+  text-align: center;
+ 
+
+}
+.app-footer>h5{
+   font-style:500 10px/15px Roboto,
+   "Helvetica Neue",
+   sans-serif !important;
+
+}

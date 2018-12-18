@@ -1,0 +1,48 @@
+<mat-toolbar color="primary" style="border-bottom:1px solid #000000">
+  <span class="font-logo">Device</span>
+  &nbsp;&nbsp; &nbsp;&nbsp;
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle();isExpanded = !isExpanded">
+    <mat-icon aria-label="Side nav toggle icon">view_module</mat-icon>
+  </button>
+  <span>
+        <!--here comes routing title -->
+         {{ getTitle() }}
+      </span>
+  <span class="zippy__spacer"></span>
+  <div ><!--
+    <mat-icon class="zippy_toolbar__icon zippy__pointer material-icons md-18 "
+              matTooltip="Notificaciones"
+              matBadge = "25"
+              matBadgeSize="medium"
+              matBadgePosition="before"
+              matBadgeColor="warn"
+              matTooltipPosition="left"
+              matTooltipClass = "zippy__tooltip__bg"
+              [matMenuTriggerFor]="notificationsMenu">
+      notification_important
+    </mat-icon>-->&nbsp;&nbsp;
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-menu  #notificationsMenu="matMenu">
+   
+  </mat-menu>
+</mat-toolbar>
+<mat-sidenav-container  autosize   class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)"  >
+
+     <app-menu></app-menu>
+  </mat-sidenav>
+  
+  <mat-sidenav-content style="overflow:hidden;">
+
+    <!-- Add Content Here -->
+    <div class="full-content">
+      <div class="zippy--router-outlet">
+        <router-outlet name="principal"></router-outlet>
+      </div>
+    </div>
+   <app-leftbar></app-leftbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -1,0 +1,74 @@
+<mat-nav-list>
+  <!-- User Profile -->
+  <mat-accordion >
+    <mat-expansion-panel class="user-profile-accordion">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div mat-card-avatar class="user-avatar">  </div>&nbsp;
+          <span class="zippy__user__name">Bienvenido Sysadmin</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+   <mat-list role="list" >
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem">&nbsp;<span class="user__profile"><mat-icon class="material-icons md-18 ">assignment_ind</mat-icon> Perfil</span></mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem"><span class="user__profile"><mat-icon class="material-icons md-18 ">directions_run</mat-icon>Cerrar sesión</span></mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+      <!-- Content Goes Here -->
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-list>
+
+    <a  [routerLink]="[{ outlets: { principal: ['operaciones'] } }]" mat-list-item href="#">
+      <mat-list-item>
+        <mat-icon class="material-icons md-18">invert_colors</mat-icon>
+        <span class="nav__element__size"   >Operaciones</span>
+       
+      </mat-list-item>
+    </a> <!--
+    <mat-accordion >
+      <mat-expansion-panel class="">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div>  </div>
+            <mat-icon class="material-icons md-18">format_list_bulleted</mat-icon>
+            <span class="">Catalogo</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list role="list" >
+          <mat-divider></mat-divider>
+         <a [routerLink]="[{ outlets: { principal: ['antenas'] }}]" mat-list-item href="#">
+      <mat-list-item>
+        <mat-icon class="material-icons md-18">settings_input_antenna</mat-icon>
+        <span class="nav__element__size"   >Antenas</span>
+      </mat-list-item>
+    </a>
+    <a [routerLink]="[{ outlets: { principal: ['camaras'] , leftBar : null } }]" mat-list-item href="#">
+      <mat-list-item>
+        <mat-icon class="material-icons md-18">camera_enhance</mat-icon>
+        <span class="nav__element__size"   >Camaras</span>
+      </mat-list-item>
+    </a>
+    <a [routerLink]="[{ outlets: { principal: ['abridores'] , leftBar : null } }]" mat-list-item href="#">
+      <mat-list-item>
+        <mat-icon class="material-icons md-18">settings_power</mat-icon>
+        <span class="nav__element__size"   >Abridores </span>
+      </mat-list-item>
+    </a>
+    <a [routerLink]="[{ outlets: { principal: ['circuito'] , leftBar : null } }]" mat-list-item href="#">
+      <mat-list-item>
+        <mat-icon class="material-icons md-18">crop_5_4</mat-icon>
+        <span class="nav__element__size"   >Circuito</span>
+      </mat-list-item>
+    </a>
+          <mat-divider></mat-divider>
+        </mat-list>
+        Content Goes Here
+      </mat-expansion-panel>
+    </mat-accordion>-->
+    
+    
+    <mat-divider></mat-divider>
+  </mat-list>
+</mat-nav-list>

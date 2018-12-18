@@ -1,0 +1,70 @@
+
+
+<ng-progress  [color]="'#71d127'" [thick]="true"></ng-progress>
+<div class="" style=" overflow-y: hidden;  overflow-x:hidden;" >
+    <div class="" style=" overflow-y: hidden;  overflow-x:hidden;">
+    <div class=" " style=" overflow-y: hidden;  overflow-x:hidden;">
+      <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+      <div  class="container-fluid" style=" overflow-y: hidden;  overflow-x:hidden;  height: 100vh;"   >
+          <div   style=" overflow-y: hidden;  overflow-x:hidden;   height: 100vh;">
+              <div class="row">
+                  <div class="login col-xs-12 col-md-8">
+                      <img src="../../../assets/img/nuevolog.jpg" class="img1" alt="">
+                  </div>
+                  <div class=" col-xs-12 col-md-4" >
+                      <div class="row">
+                          <div class="logoimg">
+                            <img src="../../../assets/img/logo-lina3.png" alt="" class="logonew" style="margin-left: 25%;width: 30%;height: 30%;
+                            margin-top: 5%;
+                            ">
+                            <img src="../../../assets/img/logo-test.png" alt="" class="logonew" style="width: 20%;height: 15%;">
+                        </div>
+                      </div>
+                      <div class="row" style="margin-top: 15%;">
+                            <form #f="ngForm" novalidate (ngSubmit)="checkLoginCredentials(f.value, f.valid)">
+                                    <div class="">
+                                       
+                                        
+                                        <div class="">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">face</i>
+                                                                                      </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Usuario
+                                                          <span class="star">*</span>
+                                                    </label>
+                                                    <input [ngModel]="credentials.use_nic" name="use_nic"
+                                                    required  #use_nic="ngModel"   type="text" class="form-control formu" >
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">lock_outline</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Contraseña
+                                                          <span class="star">*</span>
+                                                    </label>
+                                                    <input [ngModel]="credentials.password" name="password"
+                                                    required  #password="ngModel"  type="password" class="form-control formu">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer text-center">
+                                            <button type="submit"  [disabled]="!f.valid"  class="btn " style="width: 80%; background-color:#71d127;">
+                                                  <i class="material-icons">lock</i>&nbsp;iniciar sesión</button>
+                                        </div>
+                                    </div>
+                                </form>
+                      </div>
+   
+                  </div>
+              </div>
+          </div>
+    </div> 
+ </div>
+    </div>
+    </div>
+  
